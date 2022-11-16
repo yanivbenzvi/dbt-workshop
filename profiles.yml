@@ -1,0 +1,27 @@
+config:
+  send_anonymous_usage_stats: true
+  use_colors: true
+
+  partial_parse: false
+  printer_width: 250
+  write_json: true
+  warn_error: true
+  log_format: default
+  debug: true
+  version_check: true
+  fail_fast: false
+  use_experimental_parser: false
+  static_parser: true
+
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres_container
+      user: root
+      password: "1234"
+      port: 5432
+      dbname: jaffle_shop
+      schema: dbt_alice
+      threads: 4
